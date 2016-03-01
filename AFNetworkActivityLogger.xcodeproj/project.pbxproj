@@ -341,6 +341,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 29D77AA71BCC49C9005B1EF5 /* Build configuration list for PBXNativeTarget "AFNetworkActivityLogger OS X" */;
 			buildPhases = (
+				DDA624351C85DDB700588745 /* Update Carthage */,
 				29D77A9D1BCC49C9005B1EF5 /* Sources */,
 				29D77A9E1BCC49C9005B1EF5 /* Frameworks */,
 				29D77A9F1BCC49C9005B1EF5 /* Headers */,
@@ -360,6 +361,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 29D77ABA1BCC4BDD005B1EF5 /* Build configuration list for PBXNativeTarget "AFNetworkActivityLogger watchOS" */;
 			buildPhases = (
+				DDA624371C85DDCE00588745 /* Update Carthage */,
 				29D77AB01BCC4BDD005B1EF5 /* Sources */,
 				29D77AB11BCC4BDD005B1EF5 /* Frameworks */,
 				29D77AB21BCC4BDD005B1EF5 /* Headers */,
@@ -380,6 +382,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 29D77ACE1BCC4D4D005B1EF5 /* Build configuration list for PBXNativeTarget "AFNetworkActivityLogger tvOS" */;
 			buildPhases = (
+				DDA624381C85DDE100588745 /* Update Carthage */,
 				29D77AC41BCC4D4D005B1EF5 /* Sources */,
 				29D77AC51BCC4D4D005B1EF5 /* Frameworks */,
 				29D77AC61BCC4D4D005B1EF5 /* Headers */,
@@ -399,11 +402,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 29D96E6D1BCC34CD00F571A5 /* Build configuration list for PBXNativeTarget "AFNetworkActivityLogger iOS" */;
 			buildPhases = (
+				DDA624341C85DD8B00588745 /* Update Carthage */,
 				29D96E601BCC34CD00F571A5 /* Sources */,
 				29D96E611BCC34CD00F571A5 /* Frameworks */,
 				29D96E621BCC34CD00F571A5 /* Headers */,
 				29D96E631BCC34CD00F571A5 /* Resources */,
-				29D96E771BCC36E700F571A5 /* ShellScript */,
+				29D96E771BCC36E700F571A5 /* Copy Frameworks */,
 			);
 			buildRules = (
 			);
@@ -602,7 +606,7 @@
 			shellPath = /bin/sh;
 			shellScript = "/usr/local/bin/carthage copy-frameworks";
 		};
-		29D96E771BCC36E700F571A5 /* ShellScript */ = {
+		29D96E771BCC36E700F571A5 /* Copy Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -610,11 +614,68 @@
 			inputPaths = (
 				"$(SRCROOT)/Carthage/Build/iOS/AFNetworking.framework",
 			);
+			name = "Copy Frameworks";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "/usr/local/bin/carthage copy-frameworks";
+		};
+		DDA624341C85DD8B00588745 /* Update Carthage */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Update Carthage";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/carthage update --platform iOS";
+		};
+		DDA624351C85DDB700588745 /* Update Carthage */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Update Carthage";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/carthage update --platform OSX";
+		};
+		DDA624371C85DDCE00588745 /* Update Carthage */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Update Carthage";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/carthage update --platform watchOS\n";
+		};
+		DDA624381C85DDE100588745 /* Update Carthage */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Update Carthage";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/carthage update --platform tvOS";
 		};
 /* End PBXShellScriptBuildPhase section */
 

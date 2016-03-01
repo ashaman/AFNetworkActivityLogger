@@ -29,3 +29,5 @@ xcuserdata
 /fastlane/report.xml
 /fastlane/.env*private*
 fastlane/test-output/*
+Carthage/Checkouts
+Cartfile.resolved
